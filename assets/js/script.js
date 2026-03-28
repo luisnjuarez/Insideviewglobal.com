@@ -2831,3 +2831,13 @@ function Openhubspot()
 		window.hubspot.messages.EXPERIMENTAL_API.requestWidgetOpen();
 	}
 };
+
+document.addEventListener('DOMContentLoaded', function() {
+	var connectBtn = document.getElementById('btn-connect-hubspot');
+	if (connectBtn) {
+		connectBtn.addEventListener('click', function(e) {
+			e.preventDefault();
+			Openhubspot();
+		});
+	}
+});
